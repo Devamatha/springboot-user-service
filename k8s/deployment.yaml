@@ -14,8 +14,8 @@ spec:
       labels:
         app: springboot-helloworld
       annotations:
-        cocreate.io/secret-path: "development-env/database/db-credentials"
-        cocreate.io/secret-version: "1"
+        cocreate.io/secret-path: "staging/db/database"
+        cocreate.io/secret-version: "2"
     spec:
       containers:
         - name: springboot-helloworld
