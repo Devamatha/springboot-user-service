@@ -10,6 +10,10 @@ management:
     health:
       show-details: always
 
+logging:
+  level:
+    root: ${LOG_LEVEL:info}
+
 spring:
   application:
     name: springboot-helloworld
