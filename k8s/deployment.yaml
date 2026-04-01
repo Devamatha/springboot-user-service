@@ -23,7 +23,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: springboot-user-service
-          image: ghcr.io/nagarjun427/springboot-user-service:7ad524f837af1f5b2dcb9b52c57871703b67394d
+          image: ghcr.io/devamatha/springboot-user-service:latest
           envFrom:
             - configMapRef:
                 name: app-setting
