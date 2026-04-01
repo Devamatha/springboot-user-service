@@ -12,10 +12,10 @@
     </parent>
 
     <groupId>io.cocreate.demo</groupId>
-    <artifactId>hello-spring-boot</artifactId>
+    <artifactId>user-service</artifactId>
     <version>1.0.0</version>
-    <name>hello-spring-boot</name>
-    <description>Hello World Spring Boot Application</description>
+    <name>user-service</name>
+    <description>User Service Spring Boot Application</description>
 
     <properties>
         <java.version>17</java.version>

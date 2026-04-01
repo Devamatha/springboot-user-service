@@ -16,4 +16,4 @@ logging:
 
 spring:
   application:
-    name: springboot-helloworld
+    name: springboot-user-service

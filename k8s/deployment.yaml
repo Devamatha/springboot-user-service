@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-helloworld
+  name: springboot-user-service
   labels:
-    app: springboot-helloworld
+    app: springboot-user-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springboot-helloworld
+      app: springboot-user-service
   template:
     metadata:
       labels:
-        app: springboot-helloworld
+        app: springboot-user-service
     spec:
       securityContext:
         runAsNonRoot: true
@@ -22,8 +22,8 @@ spec:
         seccompProfile:
           type: RuntimeDefault
       containers:
-        - name: springboot-helloworld
-          image: ghcr.io/nagarjun427/springboot-helloworld:7ad524f837af1f5b2dcb9b52c57871703b67394d
+        - name: springboot-user-service
+          image: ghcr.io/nagarjun427/springboot-user-service:7ad524f837af1f5b2dcb9b52c57871703b67394d
           envFrom:
             - configMapRef:
                 name: redis-db
@@ -60,9 +60,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot-helloworld
+  name: springboot-user-service
   labels:
-    app: springboot-helloworld
+    app: springboot-user-service
 spec:
   type: ClusterIP
   ports:
@@ -70,4 +70,4 @@ spec:
       targetPort: 8080
       protocol: TCP
   selector:
-    app: springboot-helloworld
+    app: springboot-user-service

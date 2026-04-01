@@ -12,8 +12,8 @@ public class HelloController {
     @GetMapping("/")
     public Map<String, String> hello() {
         return Map.of(
-            "message", "Hello World!",
-            "service", "springboot-helloworld",
+            "message", "User Service!",
+            "service", "springboot-user-service",
             "timestamp", Instant.now().toString()
         );
     }
