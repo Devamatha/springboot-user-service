@@ -29,7 +29,7 @@ spec:
             - configMapRef:
                 name: app-setting
             - secretRef:
-                name: redis-credentials
+                name: mysqlsecrets
           securityContext:
             allowPrivilegeEscalation: false
             readOnlyRootFilesystem: false
