@@ -24,6 +24,7 @@ spec:
       containers:
         - name: springboot-user-service
           image: ghcr.io/devamatha/springboot-user-service:latest
+          imagePullPolicy: Always
           envFrom:
             - configMapRef:
                 name: app-setting
